@@ -26,18 +26,17 @@ scissors = '''
       (____)
 ---.__(___)
 '''
+def rock_paper_scissors():
+    user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+    computer_choice = rn.randint(0, 2)
+    game_images = [rock, paper, scissors]
+    if user_choice >= 3 or user_choice < 0:
+        print("You typed an invalid number, you lose!")
+    else:
+        print(game_images[user_choice])
 
-user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
-
-computer_choice = rn.randint(0, 2)
-game_images = [rock, paper, scissors]
-if user_choice >= 3 or user_choice < 0:
-    print("You typed an invalid number, you lose!")
-else:
-    print(game_images[user_choice])
-
-    print("Computer chose:")
-    print(game_images[computer_choice])
+        print("Computer chose:")
+        print(game_images[computer_choice])
 
     if user_choice == 0 and computer_choice == 2:
         print("You win!")
@@ -50,3 +49,12 @@ else:
     elif computer_choice == user_choice:
         print("It's a draw")
         
+# main function
+def main():
+    rock_paper_scissors()
+    
+    
+# entry point of the script
+if __name__ == "__main__":
+    main()
+    
